@@ -1,0 +1,50 @@
+[
+  {
+    "name": "pdfs",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "b1f8f082-53a1-4f8d-9754-7f67b0ff9585",
+        "location": "https://demosafabriczuzu1.dfs.core.windows.net",
+        "subpath": "/files/pdfs"
+      }
+    }
+  },
+  {
+    "name": "files",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "b1f8f082-53a1-4f8d-9754-7f67b0ff9585",
+        "location": "https://demosafabriczuzu1.dfs.core.windows.net",
+        "subpath": "/files"
+      }
+    }
+  },
+  {
+    "name": "csvs",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "b1f8f082-53a1-4f8d-9754-7f67b0ff9585",
+        "location": "https://demosafabriczuzu1.dfs.core.windows.net",
+        "subpath": "/files/csvs"
+      }
+    }
+  },
+  {
+    "name": "55265",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "b1f8f082-53a1-4f8d-9754-7f67b0ff9585",
+        "location": "https://demosafabriczuzu1.dfs.core.windows.net",
+        "subpath": "/55265"
+      }
+    }
+  }
+]
