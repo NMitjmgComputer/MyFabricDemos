@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SQLDatabase",
+    "displayName": "Special Purpose SQL DB"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7416492f-7f85-8427-4925-ba38344ce7fa"
+  }
+}
