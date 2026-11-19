@@ -1,0 +1,39 @@
+table Medallion
+	lineageTag: 377c8ae7-61d6-4d86-9b60-1d1b870d8341
+
+	column MedallionID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7dc8b895-4710-420c-9eae-121f2a675eb4
+		summarizeBy: none
+		sourceColumn: MedallionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MedallionBKey
+		dataType: string
+		lineageTag: c8caf65b-e526-4a75-83f0-556986b7e2cd
+		summarizeBy: none
+		sourceColumn: MedallionBKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column MedallionCode
+		dataType: string
+		lineageTag: b7f22ff6-a652-49ce-9f02-55664c89709a
+		summarizeBy: none
+		sourceColumn: MedallionCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medallion = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("ygpdjcljbyvuxmxehmq2wi5wee-2s5al5pdvlae7ctfpdacdtpxna.datawarehouse.fabric.microsoft.com", "WH_Taxi_Data"),
+				    dbo_Medallion = Source{[Schema="dbo",Item="Medallion"]}[Data]
+				in
+				    dbo_Medallion
+
+	annotation PBI_ResultType = Table
+

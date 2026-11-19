@@ -1,0 +1,39 @@
+table Medallion
+	lineageTag: efc844ae-3b50-41cd-844d-ba7bc06bcbb5
+	sourceLineageTag: [dbo].[Medallion]
+
+	column MedallionID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b4eb75a-0a19-426d-9902-c795bfc6e173
+		sourceLineageTag: MedallionID
+		summarizeBy: count
+		sourceColumn: MedallionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MedallionBKey
+		dataType: string
+		lineageTag: 99c130d2-034c-46d1-8f60-368910d5ec25
+		sourceLineageTag: MedallionBKey
+		summarizeBy: none
+		sourceColumn: MedallionBKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column MedallionCode
+		dataType: string
+		lineageTag: 89408566-8b23-459e-8bca-960d3d09a2ab
+		sourceLineageTag: MedallionCode
+		summarizeBy: none
+		sourceColumn: MedallionCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medallion = entity
+		mode: directLake
+		source
+			entityName: Medallion
+			schemaName: dbo
+			expressionSource: 'DirectLake - WH_Taxi_Data'
+

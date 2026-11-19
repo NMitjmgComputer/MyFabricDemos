@@ -1,0 +1,98 @@
+table Time
+	lineageTag: 9a010f06-e4cf-4927-abc0-a16710aa505f
+	sourceLineageTag: [dbo].[Time]
+
+	column TimeID
+		dataType: int64
+		formatString: 0
+		lineageTag: d3e3495d-b0b1-453d-a2bd-6e7d8939760c
+		sourceLineageTag: TimeID
+		summarizeBy: count
+		sourceColumn: TimeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeBKey
+		dataType: string
+		lineageTag: 4293293a-a269-4f28-9097-0f4447d774ac
+		sourceLineageTag: TimeBKey
+		summarizeBy: none
+		sourceColumn: TimeBKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 8663375f-d6b1-4be4-99c3-bd3cc001102e
+		sourceLineageTag: HourNumber
+		summarizeBy: sum
+		sourceColumn: HourNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinuteNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: cde3a1b7-c99a-49b9-adf2-830fd802d6a1
+		sourceLineageTag: MinuteNumber
+		summarizeBy: sum
+		sourceColumn: MinuteNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SecondNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 93c8b74e-433a-49ad-9eb3-0b07dca8cab0
+		sourceLineageTag: SecondNumber
+		summarizeBy: sum
+		sourceColumn: SecondNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeInSecond
+		dataType: int64
+		formatString: 0
+		lineageTag: 737d8e20-9e96-44ce-be1e-08ab398a1c0b
+		sourceLineageTag: TimeInSecond
+		summarizeBy: sum
+		sourceColumn: TimeInSecond
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourlyBucket
+		dataType: string
+		lineageTag: b3f3ed3c-6381-4d9f-9c40-0a6d9ac55a8f
+		sourceLineageTag: HourlyBucket
+		summarizeBy: none
+		sourceColumn: HourlyBucket
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayTimeBucketGroupKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a58ef394-6e53-44ce-849c-71f519102372
+		sourceLineageTag: DayTimeBucketGroupKey
+		summarizeBy: count
+		sourceColumn: DayTimeBucketGroupKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayTimeBucket
+		dataType: string
+		lineageTag: 6e2e090c-e858-4ac7-a17e-214b46633907
+		sourceLineageTag: DayTimeBucket
+		summarizeBy: none
+		sourceColumn: DayTimeBucket
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Time = entity
+		mode: directLake
+		source
+			entityName: Time
+			schemaName: dbo
+			expressionSource: 'DirectLake - WH_Taxi_Data'
+

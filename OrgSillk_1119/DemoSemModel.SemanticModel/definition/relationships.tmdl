@@ -1,0 +1,8 @@
+relationship cb641706-9627-9ea6-d2b5-9282377d6d17
+	fromColumn: Trip.DateID
+	toColumn: Date.DateID
+
+relationship d387993f-9dc1-bdb8-5da1-fbed1da336e6
+	fromColumn: Trip.HackneyLicenseID
+	toColumn: HackneyLicense.HackneyLicenseID
+

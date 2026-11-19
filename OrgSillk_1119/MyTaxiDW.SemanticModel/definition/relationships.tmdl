@@ -1,0 +1,22 @@
+relationship AutoDetected_21512676-977f-43b2-8c83-c5ff56b8cfde
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Weather.DateID
+	toColumn: Date.DateID
+
+relationship AutoDetected_a3917356-b5ee-4107-a690-102c6b5f1fe3
+	fromColumn: Trip.DateID
+	toColumn: Date.DateID
+
+relationship AutoDetected_c39020ea-58c2-4044-8662-d12f15331376
+	fromColumn: Weather.GeographyID
+	toColumn: Geography.GeographyID
+
+relationship AutoDetected_8f405686-f18a-4852-b3a2-58c9030d2b8c
+	fromColumn: Trip.MedallionID
+	toColumn: Medallion.MedallionID
+
+relationship AutoDetected_bd40f52c-ef90-4ecb-8a81-349e91beda06
+	fromColumn: Trip.HackneyLicenseID
+	toColumn: HackneyLicense.HackneyLicenseID
+

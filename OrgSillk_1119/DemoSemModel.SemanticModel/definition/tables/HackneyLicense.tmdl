@@ -1,0 +1,39 @@
+table HackneyLicense
+	lineageTag: 5a049ffc-a9ca-4599-86f7-2d9c2b8f49be
+	sourceLineageTag: [dbo].[HackneyLicense]
+
+	column HackneyLicenseID
+		dataType: int64
+		formatString: 0
+		lineageTag: be8f3736-5354-43c9-bd6b-d02a108d87a7
+		sourceLineageTag: HackneyLicenseID
+		summarizeBy: none
+		sourceColumn: HackneyLicenseID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HackneyLicenseBKey
+		dataType: string
+		lineageTag: be5fc77e-9895-4fa3-8dbe-4444015c9bc4
+		sourceLineageTag: HackneyLicenseBKey
+		summarizeBy: none
+		sourceColumn: HackneyLicenseBKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column HackneyLicenseCode
+		dataType: string
+		lineageTag: a72891bb-9785-48b3-bbe9-ad15b9aee90d
+		sourceLineageTag: HackneyLicenseCode
+		summarizeBy: none
+		sourceColumn: HackneyLicenseCode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition HackneyLicense = entity
+		mode: directLake
+		source
+			entityName: HackneyLicense
+			schemaName: dbo
+			expressionSource: 'DirectLake - WH_Taxi_Data'
+
