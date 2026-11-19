@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "MirroredDatabase",
+    "displayName": "PBI Demo Mirrored"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ea737dbb-b296-957c-4e9c-fe0b29bff92b"
+  }
+}
